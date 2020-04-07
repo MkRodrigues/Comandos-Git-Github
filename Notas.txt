@@ -1,0 +1,33 @@
+Comandos Git 
+
+Comandos Gerais
+git config --global -l ( -l de list/lista)- Lista todas configurações do Git
+Configurar um novo editor de texto para o Git - git config --global core.editor [nome do novo editor] 
+git log - Mostra as logs com os detalhes dos arquivos (hash do commit, nome, data e autor do commit). O atalho "q" sai do comando de logs
+git log --graph - Mostra logs detalhados (detalhamento da árvore hierarquica de branchs e commits)
+git log --graph --oneline - Mostra as mesmas informações da árvore em uma linha sem os detalhes das hashs do commits
+
+GIT ALIAS (Cria atalhos dos comandos do git)
+git config --global alias.{atalho para o comando} {nome do comando desejado}
+ex.: git config --global alias.s status
+
+GIT STASH (Salva Rascunhos dos arquivos para uso posterior)
+git stash - Após o arquivo ser adicionado via git add, o comando Git Stash salva o arquivo ou as mudanças efetuadas naquele momento em uma área chamada WIP (Working in Progress), tirando o(s) mesmo(s) do Working Tree, salvando-o como rascunho.
+git stash list - Lista os Stashs salvos
+git stash apply - Aplica as mudanças salvas de volta ao Working Tree.
+git stash clear - limpa todos os Stash salvos
+
+GIT TAG (Cria uma tag de versionamento no Github)
+git tag -a -m "mudanças efetuadas naquela versão"
+Uma Tag deve ser criada após o envio dos arquivos para o repositório remoto (github).
+Git tag - Mostra as tags inseridas 
+git push origin :{tag} - Apaga a tag selecionada no repositório remoto
+
+Git Branch
+Git checkout -b {Nome da nova Branch} - Cria uma nova branch
+Git branch - Mostra as Branchs criadas
+Git checkout {nomeDaBranch}- Troca de uma branch para outra
+Git branch -d {nome da branch} - Deleta a branch no repositório local
+git push origin :{nome da branch} - Apaga a branch no repositório remoto.
+git merge {nome da branch} - Une uma branch a outra (Lembre-se de estar branch de origem ao qual você deseja mergir)
+git rebase 
