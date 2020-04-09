@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Git/Github</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <table id="tabela">
+        <thead id="cabecalho">
+            <tr class="linha">
+                <th class="titulo-td">Classificação</th>
+                <th class="titulo-td">Comando</th>
+                <th class="titulo-td">Função</th>
+                <th class="titulo-td">Observações Gerais</th>
+                <th class="titulo-td">Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div class="c1">
+                <tr id="classe">
+                    <th class="titulo-td">Classe</th>
+                    <td colspan="4" class="classe">GLOBAL</td>
+                </tr>
+
+                <tr class="c1-l1">
+                    <td>Comandos Gerais</td>
+                    <td>git config --global -l</td>
+                    <td>Lista todas as configurações inseridas no Git</td>
+                    <td>O sufixo -l vem de list/lista</td>
+                    <td>--</td>
+                </tr>
+                <tr class="c1-l2">
+                    <td>--</td>
+                    <td>git config --global core.editor {nome do novo editor}</td>
+                    <td>Configura um novo editor de texto para o Git</td>
+                    <td>O editor de texto pode ser usado para definir mensagens de commits e informações gerais, bem
+                        como editar conflitos</td>
+                    <td>git config --global core.editor code (configura o app Visual Studio Code como editor principal)
+                    </td>
+                </tr>
+            </div>
+
+            <div class="c2">
+                <tr id="classe">
+                    <th class="titulo-td">Classe</th>
+                    <td colspan="4" class="classe">GIT LOG</td>
+                </tr>
+
+                <tr class="c2-l1">
+                    <td>Git Log</td>
+                    <td>git log</td>
+                    <td>Retorna ao usuário um amontoado de infromações sobre commits, branchs e etc.</td>
+                    <td>As informações de commits/branchs retornadas podem conter (hash do commit/branch, autor do
+                        commit/branch, data, e estado onde se encontra o HEAD, e etc.</td>
+                    <td>--</td>
+
+                </tr>
+                <tr class="c2-l2">
+                    <td>Graph</td>
+                    <td>git log --graph</td>
+                    <td>Mostra logs detalhadas de forma completa, (detalhamento da árvore hierárquica de branchs e
+                        commits)</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+                <tr class="c2-l3">
+                    <td>Graph Oneline</td>
+                    <td>git log --graph --oneline</td>
+                    <td>Mostra logs detalhadas de forma simplificada "uma linha", (detalhamento da árvore hierárquica de
+                        branchs e commits)</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+                <tr class="c2-l4">
+                    <td>Q (Quit/Sair)</td>
+                    <td>q</td>
+                    <td>O comando "q" sai do detalhamento de logs</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+            </div>
+
+            <div class="c3">
+                <tr id="classe">
+                    <th class="titulo-td">Classe</th>
+                    <td colspan="4" class="classe">GIT ALIAS</td>
+                </tr>
+
+                <tr class="c3-l1">
+                    <td>Git Alias</td>
+                    <td>git config --global alias.{atalho para o comando} {nome do comando desejado}</td>
+                    <td>Cria atalhos dos comandos do git</td>
+                    <td>--</td>
+                    <td>git config --global alias.s status</td>
+                </tr>
+                <tr class="c3-l2">
+                    <td>Git Alias List</td>
+                    <td>git config --get-regexp alias</td>
+                    <td>Retorna uma lista com os Alias configurados</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+            </div>
+
+            <div class="c4">
+                <tr id="classe">
+                    <th class="titulo-td">Classe</th>
+                    <td colspan="4" class="classe">GIT STASH</td>
+                </tr>
+
+                <tr class="c4-l1">
+                    <td>Git Stash</td>
+                    <td>git stash</td>
+                    <td>Salva Rascunhos dos arquivos para uso posterior</td>
+                    <td>Após o arquivo ser adicionado via git add, o comando Git Stash salva o arquivo ou as mudanças
+                        efetuadas naquele momento em uma área chamada WIP (Working in Progress), tirando o(s) mesmo(s)
+                        do Working Tree, salvando-o como rascunho.</td>
+                    <td>--</td>
+                </tr>
+
+                <tr class="c4-l2">
+                    <td>Stash List</td>
+                    <td>git stash list</td>
+                    <td> Lista os Stashs salvos</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+
+                <tr class="c4-l3">
+                    <td>Stash Apply</td>
+                    <td>git stash apply</td>
+                    <td>Aplica as mudanças salvas de volta ao Working Tree, possibilitando continuedade da edição dos
+                        arquivos</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+                <tr class="c4-l4">
+                    <td>Stash Clear</td>
+                    <td>git stash clear</td>
+                    <td>Limpa todos os Stash's salvos</td>
+                    <td>Exclui os arquivos não permitindo sua recuperação</td>
+                    <td>--</td>
+                </tr>
+            </div>
+            <div class="c5">
+                <tr id="classe">
+                    <th class="titulo-td">Classe</th>
+                    <td colspan="4" class="classe">GIT ISSUES (FEATURE DO GITHUB)</td>
+                </tr>
+
+                <tr class="c5-l1">
+                    <td>Git Issue</td>
+                    <td>git commit -m "Nome do commit #{numero da issue a ser referenciada}"</td>
+                    <td>Cria um "Problema" a ser resolvido no Github</td>
+                    <td>A Issue deve ser criada no Github, porém pode ser referenciada no commit do repositório local através do comando ao lado</td>
+                    <td>git commit -m "Primeiro commit #1"</td>
+                </tr>
+
+                <tr class="c5-l2">
+                    <td>Issue Closes</td>
+                    <td>git commit -m "Informação do commit closes #{número da Issue no Github}"</td>
+                    <td>Fecha uma Issue aberta no Github</td>
+                    <td>A Issue será fechada quando a branch for mergida com a master, ou se não houver branch, quando o push for realizado</td>
+                    <td>Para fechar uma issue referencie a mesma no commit colocando a síntaxe closes antes de #(hashtag/serquilha) - git commit -m "Informação do commit closes #1"</td>
+                </tr>
+
+                <tr class="c5-l3">
+                    <td>Issue Fixes</td>
+                    <td>git commit -m "Informação do commit fixes #{número da Issue no Github}"</td>
+                    <td>Fecha uma Issue aberta no github, indicando que a mesma faz parte de um bug que está sendo resolvido</td>
+                    <td>A Issue será fechada quando a branch for mergida com a master, ou se não houver branch, quando o push for realizado</td>
+                    <td>Para fechar uma issue referencie a mesma no commit colocando a síntaxe fixes antes de #(hashtag/serquilha) - git commit -m "Informação do commit fixes #1"</td>
+                </tr>
+            </div>
+
+
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+<!-- <tr class="">
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr> -->
+<!-- <div class="conteudo-2">
+    <tr id="classe">
+        <th class="titulo-td">Classe</th>
+        <td colspan="4" class="classe"></td>
+    </tr>
+
+    <tr class="">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</div> -->

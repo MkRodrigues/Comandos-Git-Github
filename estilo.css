@@ -1,0 +1,39 @@
+body, h1, h2, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body{
+    font-family: 'Montserrat', Helvetica, Arial,  sans-serif;
+    color: #000000;
+  }
+  
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  
+  li, a{
+    text-decoration: none;
+  }
+
+  /* Tabela */
+
+  #tabela, tr, th, td {
+      border: 1px solid black;
+      text-align: center;
+  }
+
+  .classe {
+    text-align: left;
+  }
+
+  .titulo-td {
+    text-transform: uppercase;
+  }
+
+  .cabecalho {
+      display: fixed;
+  }
